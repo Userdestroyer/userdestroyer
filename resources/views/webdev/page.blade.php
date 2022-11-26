@@ -6,10 +6,8 @@
 
 @section('content')
 
-    <x-description job="webdev"/>
+    <x-description :job="$job"/>
 
-    <x-c-v />
-
-    <x-projects />
+    <x-c-v :job="$job"/>
 
 @endsection

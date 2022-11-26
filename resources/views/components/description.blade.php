@@ -1,3 +1,3 @@
 <div>
-    @include('components.description.' . $description->codename, ['description' => $description])
+    @include('components.description.' . $job->codename, ['description' => $job])
 </div>

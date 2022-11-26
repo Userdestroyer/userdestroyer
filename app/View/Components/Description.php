@@ -3,18 +3,17 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Description as Desc;
 
 class Description extends Component
 {
-    public string $job;
+    public $job;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $job)
+    public function __construct($job)
     {
         $this->job = $job;
     }
@@ -26,9 +25,6 @@ class Description extends Component
      */
     public function render()
     {
-        if(!$description = Desc::where('codename', $this->job)->first()){
-            return abort('404');
-        }
-        return view('components.description', ['description' => $description]);
+        return view('components.description');
     }
 }

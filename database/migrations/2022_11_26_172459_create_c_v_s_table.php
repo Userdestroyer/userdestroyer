@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('descriptions', function (Blueprint $table) {
+        Schema::create('c_v_s', function (Blueprint $table) {
             $table->id();
-            $table->char('name');
-            $table->char('codename');
-            $table->text('occupation');
-            $table->char('experience');
-            $table->text('description');
+            $table->bigInteger('job_id')->index();
+            $table->char('language_code');
+            $table->text('file');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('descriptions');
+        Schema::dropIfExists('c_v_s');
     }
 };
