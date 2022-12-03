@@ -4,10 +4,9 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Projects extends Component
+class Company extends Component
 {
     public $company;
-    public $projects;
 
     /**
      * Create a new component instance.
@@ -26,7 +25,6 @@ class Projects extends Component
      */
     public function render()
     {
-        $this->projects = $this->company->projects;
-        return view('components.projects');
+        return view('components.company');
     }
 }

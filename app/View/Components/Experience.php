@@ -3,20 +3,21 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\Job;
 
-class Projects extends Component
+class Experience extends Component
 {
-    public $company;
-    public $projects;
+    public $job;
+    public $companies;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($company)
+    public function __construct($job)
     {
-        $this->company = $company;
+        $this->job = $job;
     }
 
     /**
@@ -26,7 +27,7 @@ class Projects extends Component
      */
     public function render()
     {
-        $this->projects = $this->company->projects;
-        return view('components.projects');
+        $this->companies = $this->job->company->reverse();
+        return view('components.experience');
     }
 }

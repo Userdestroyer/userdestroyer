@@ -10,4 +10,6 @@
 
     <x-c-v :job="$job"/>
 
+    <x-experience :job="$job" />
+
 @endsection
