@@ -90,7 +90,7 @@
 }
 
 .cv__button{;
-    color: white;
+    color: black;
     min-width: 200px;
     min-height: 55px;
     //border: solid 1px;
@@ -103,7 +103,7 @@
 }
 
 .cv__button:hover{
-    color: white;
+    color: black;
     background-color: #85ff85;
 }
 
